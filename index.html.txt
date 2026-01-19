@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOCKS5 Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0d6efd;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .product h2 {
+      margin: 0 0 10px 0;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    .buy-btn {
+      padding: 12px 20px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .buy-btn:hover {
+      background: #0b5ed7;
+    }
+    .hidden {
+      display: none;
+    }
+    .payment-box {
+      text-align: center;
+    }
+    .payment-box h2 {
+      color: #0d6efd;
+    }
+    .upload-box {
+      margin-top: 20px;
+      padding: 20px;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    input[type="file"] {
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SOCKS5 Proxy Shop</h1>
+    <p>Fast • Reliable • Secure</p>
+  </header>
+
+  <!-- PRODUCT PAGE -->
+  <div class="container" id="productPage">
+    <div class="product">
+      <div>
+        <h2>SOCKS5 Access</h2>
+        <p>High-quality SOCKS5 proxy service</p>
+        <p class="price">Price: 7 Blue Gem Lock / Monthly</p>
+      </div>
+      <button class="buy-btn" onclick="goToPayment()">Buy Now</button>
+    </div>
+  </div>
+
+  <!-- PAYMENT PAGE -->
+  <div class="container hidden" id="paymentPage">
+    <div class="payment-box">
+      <h2>Payment World</h2>
+      <p><strong>DANTSAVES</strong></p>
+      <p>Please send the payment and upload a screenshot as proof.</p>
+
+      <div class="upload-box">
+        <p><strong>Upload Payment Screenshot</strong></p>
+        <input type="file" accept="image/*,.pdf" />
+      </div>
+
+      <p style="margin-top:20px; color:#555;">Your order will be processed after verification.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 SOCKS5 Store. All rights reserved.
+  </footer>
+
+  <script>
+    function goToPayment() {
+      document.getElementById('productPage').classList.add('hidden');
+      document.getElementById('paymentPage').classList.remove('hidden');
+      window.scrollTo(0, 0);
+    }
+  </script>
+
+</body>
+</html>
